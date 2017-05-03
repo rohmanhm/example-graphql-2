@@ -1,4 +1,9 @@
-export default server => {
-  server.use(import('./ParserMiddleware'))
-  server.use(import('./GraphQLMiddleware'))
+/* @flow */
+
+import ParserMiddleware from './ParserMiddleware'
+import GraphQLMiddleware from './GraphQLMiddleware'
+
+export default (server: Object): void => {
+  ParserMiddleware(server)
+  GraphQLMiddleware(server)
 }
