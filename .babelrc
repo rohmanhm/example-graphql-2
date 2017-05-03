@@ -5,9 +5,12 @@
     "flow"
   ],
   "plugins": [
+    "syntax-dynamic-import",
+    "dynamic-import-node",
     ["module-resolver", {
       "root": ["./src", "./config"],
       "alias": {
+        "@": "./src",
         "@config": "./config"
       }
     }]
