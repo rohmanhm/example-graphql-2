@@ -3,7 +3,10 @@
 [include]
 
 [libs]
-flow-typed
 
 [options]
+module.name_mapper='^@config$' -> '<PROJECT_ROOT>/config/'
+module.name_mapper='^@config\/\(.*\)$' -> '<PROJECT_ROOT>/config/\1'
+module.system=haste
+
 suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe

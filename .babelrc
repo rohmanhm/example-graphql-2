@@ -1,6 +1,15 @@
 {
   "presets": [
     "latest",
-    "stage-3"
+    "stage-3",
+    "flow"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src", "./config"],
+      "alias": {
+        "@config": "./config"
+      }
+    }]
   ]
 }
