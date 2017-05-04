@@ -3,7 +3,7 @@
 import { makeExecutableSchema } from 'graphql-tools'
 // import { schema as userSchema, resolver as userResolver } from './User'
 
-const rootSchema = gql`
+const rootSchema = `
   type Query {
     feed: String
   }

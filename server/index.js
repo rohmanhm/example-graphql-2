@@ -2,7 +2,7 @@
 
 import express from 'express'
 
-import config from '@config'
+import config from '@/config'
 import Middleware from './middleware'
 
 const { port } = config
