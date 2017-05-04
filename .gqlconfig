@@ -1,28 +1,24 @@
 {
   schema: {
-    files: 'schema/**/*.gql',
+    files: 'schema/**/*.graphql',
   },
   query: {
     files: [
-      // query gql files
+      // query graphql files
       {
-        match: 'path/to/files/**/*.gql',
+        match: 'schema/**/*.graphql',
         parser: 'QueryParser',
-      },
-      {
-        match: 'src/**/*.js',
-        parser: [ 'EmbeddedQueryParser', { startTag: '`', endTag: '`' } ],
       },
       // [Embedded queries] relay files
       {
-        match: { include: 'path/to/code/**/*.js', ignore: '**/tests/**/*.js' },
+        match: {
+          include: [
+            'schema/**/*.js'
+          ], 
+          ignore: '**/tests/**/*.js'
+        },
         parser: [ 'EmbeddedQueryParser', { startTag: 'Relay\\.QL`', endTag: '`' } ],
         isRelay: true,
-      },
-      // [Embedded queries] gql tag files
-      {
-        match: { include: 'path/to/code/**/*.js', ignore: '**/tests/**/*.js' },
-        parser: [ 'EmbeddedQueryParser', { startTag: 'gql`', endTag: '`' } ],
       }
     ]
   }
