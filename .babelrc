@@ -5,6 +5,7 @@
     "flow"
   ],
   "plugins": [
+    "transform-export-extensions",
     ["module-resolver", {
       "root": ["./src", "./config"],
       "alias": {

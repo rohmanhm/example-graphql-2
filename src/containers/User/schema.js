@@ -1,3 +1,4 @@
+const schema = `
 # Node type
 type Node {
   id: ID!
@@ -13,3 +14,6 @@ type User implements Node {
   # Email user
   email: String
 }
+`
+
+export default schema
