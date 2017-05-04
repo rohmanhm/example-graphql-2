@@ -1,5 +1,6 @@
 const config = {
-  // is empty
+  graphqlEndpoint: '/graphql',
+  graphiqlEndpoint: '/graphiql'
 }
 
 module.exports = process.env.NODE_ENV !== 'production'
