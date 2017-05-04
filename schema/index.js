@@ -1,32 +1,29 @@
 /* @flow */
 
-import { makeExecutableSchema } from 'graphql-tools'
-// import { schema as userSchema, resolver as userResolver } from './User'
+import {
+  GraphQLObjectType,
+  GraphQLSchema,
+  GraphQLList,
+  GraphQLString
+} from 'graphql'
+import userType, {
+  getUsers
+} from './User'
 
-const rootSchema = `
-  type Query {
-    feed: String
-  }
-
-  schema {
-    query: Query
-  }
-`
-
-const rootResolvers = {
-  Query: {
-    feed () {
-      return 'feed'
+export const QueryType = new GraphQLObjectType({
+  name: 'Query',
+  description: 'Query Type',
+  fields: {
+    users: {
+      type: new GraphQLList(userType),
+      description: 'Show all users registered',
+      resolve: getUsers
     }
   }
-}
-
-const schema = rootSchema
-const resolvers = Object.assign({}, rootResolvers)
-
-const executableSchema = makeExecutableSchema({
-  typeDefs: schema,
-  resolvers,
 })
 
-export default executableSchema
+export const Schema = new GraphQLSchema({
+  query: QueryType
+})
+
+export default Schema
