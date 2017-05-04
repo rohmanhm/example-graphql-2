@@ -1,11 +1,11 @@
 /* @flow */
 
-export default {
-  user () {
-    return 'user'
-  },
-
-  users () {
-    return 'many user'
-  }
+export const getUsers = () => {
+  return [
+    {
+      id: 111,
+      name: 'hjo',
+      email: 'asdfdsf'
+    }
+  ]
 }
