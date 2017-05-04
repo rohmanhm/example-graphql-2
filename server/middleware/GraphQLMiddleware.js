@@ -10,5 +10,10 @@ export default (server: Object): void => {
   }
 
   server.use('/graphql', graphqlExpress(options))
-  server.use('/graphiql', graphiqlExpress)
+  server.use('/graphiql', graphiqlExpress(
+    {
+      endpointURL: '/graphql',
+      query: ''
+    }
+  ))
 }
