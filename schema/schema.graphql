@@ -1,0 +1,21 @@
+interface NodeInterface {
+  id: ID!
+}
+
+# Query Type
+type Query {
+  # Show all users registered
+  users: [User]
+}
+
+# User schema
+type User implements NodeInterface {
+  # User ID
+  id: ID!
+
+  # User full name
+  name: String
+
+  # User email
+  email: String
+}
