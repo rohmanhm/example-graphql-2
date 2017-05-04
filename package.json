@@ -4,8 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js",
-    "update-schema": "babel-node ./scripts/updateSchema.js"
+    "dev": "nodemon index.js -x node ./scripts/devWatcher.js",
+    "update-schema": "babel-node ./scripts/updateSchema.js",
+    "watch:schema": "echo 'schema'"
   },
   "dependencies": {
     "body-parser": "^1.17.1",
@@ -21,7 +22,9 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
+    "execa": "^0.6.3",
     "flow-bin": "^0.45.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "sane": "^1.6.0"
   }
 }
