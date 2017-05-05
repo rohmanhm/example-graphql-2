@@ -1,29 +1,8 @@
 /* @flow */
 
-import {
-  GraphQLObjectType,
-  GraphQLSchema,
-  GraphQLList,
-  GraphQLString
-} from 'graphql'
-import userType, {
-  getUsers
-} from './User'
+import { GraphQLSchema } from 'graphql'
+import queryType from './Query'
 
-export const QueryType = new GraphQLObjectType({
-  name: 'Query',
-  description: 'Query Type',
-  fields: {
-    users: {
-      type: new GraphQLList(userType),
-      description: 'Show all users registered',
-      resolve: getUsers
-    }
-  }
+export default new GraphQLSchema({
+  query: queryType
 })
-
-export const Schema = new GraphQLSchema({
-  query: QueryType
-})
-
-export default Schema
