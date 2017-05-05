@@ -30,8 +30,9 @@
     "nodemon": "^1.11.0",
     "regenerator-runtime": "^0.10.5",
     "sane": "^1.6.0"
-  }, 
+  },
   "jest": {
+    "verbose": true,
     "testMatch": [
       "**/test/**/*.js?(x)",
       "**/?(*.)(spec|test).js?(x)"

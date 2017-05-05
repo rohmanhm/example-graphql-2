@@ -6,7 +6,7 @@ import {
 } from 'graphql'
 import userType, {
   getUsers
-} from './User'
+} from '../User'
 
 export default new GraphQLObjectType({
   name: 'Query',
