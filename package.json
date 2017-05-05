@@ -36,6 +36,10 @@
     "testMatch": [
       "**/test/**/*.js?(x)",
       "**/?(*.)(spec|test).js?(x)"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/config/"
     ]
   }
 }
