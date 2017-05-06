@@ -1,11 +1,11 @@
 const config = {
+  env: process.env.NODE_ENV,
   graphqlEndpoint: '/graphql',
   graphiqlEndpoint: '/graphiql'
 }
 
 let envConfig 
-
-switch (process.env.NODE_ENV) {
+switch (config.env) {
   case 'production':
     envConfig = Object.assign(config, require('./prod'))
     break
