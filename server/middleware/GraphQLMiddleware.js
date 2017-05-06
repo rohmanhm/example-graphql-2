@@ -4,7 +4,7 @@ import { graphqlExpress, graphiqlExpress } from 'graphql-server-express'
 import { graphqlEndpoint, graphiqlEndpoint } from '@/config'
 import schema from '@/schema'
 
-export default (server: Object): void => {
+export default (server: express$Router): void => {
   const options: Object = {
     schema,
     graphiql: true

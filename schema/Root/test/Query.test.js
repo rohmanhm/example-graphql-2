@@ -1,5 +1,3 @@
-/* @flow */
-
 import queryType from '../Query'
 
 describe('Query', () => {

@@ -8,6 +8,6 @@
 module.name_mapper='^@$' -> '<PROJECT_ROOT>/'
 module.name_mapper='^@\/\(.*\)$' -> '<PROJECT_ROOT>/\1'
 module.system=haste
-esproposal.export_star_as=enabled
+esproposal.export_star_as=enable
 
 suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe
