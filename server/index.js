@@ -1,9 +1,7 @@
 /* @flow */
 
-import Server from './server'
+import Express from './express'
 import { port } from '../config'
 
-const server = new Server()
-server.start(port)
-
-export default server
+export { Express }
+export default new Express(port)

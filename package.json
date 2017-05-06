@@ -30,7 +30,8 @@
     "jest-cli": "^19.0.2",
     "nodemon": "^1.11.0",
     "regenerator-runtime": "^0.10.5",
-    "sane": "^1.6.0"
+    "sane": "^1.6.0",
+    "supertest": "^3.0.0"
   },
   "jest": {
     "verbose": true,
