@@ -1,8 +1,8 @@
 /* @flow */
 
-import http from 'http'
 import server from '../server'
 import config from '../config'
+import { assertStatusCode } from './helpers/serverAssertions'
 
 describe('Server', () => {
 
@@ -17,10 +17,7 @@ describe('Server', () => {
     server.close()
   })
 
-  test('Should open graphiql', () => {
-    http.get(`http://localhost:${ config.port }/${ config.graphiqlEndpoint }`, function (res) {
-      expect(res.statusCode).toEqual(200)
-      done()
-    })
+  it('Should open graphiql', () => {
+    assertStatusCode(`http://localhost:${ config.port }/${ config.graphiqlEndpoint }`, 200)
   })
 })
