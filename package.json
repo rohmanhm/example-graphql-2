@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon index.js -i **/test",
     "update-schema": "babel-node ./scripts/updateSchema.js",
     "test": "jest"
   },
@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@playlyfe/gql": "^2.2.4",
+    "axios": "^0.16.1",
     "babel-cli": "^6.24.1",
     "babel-jest": "^19.0.0",
     "babel-plugin-module-resolver": "^2.7.0",
@@ -39,7 +40,7 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/.+\/helpers/",
+      "/.+/helpers/",
       "/config/"
     ]
   }

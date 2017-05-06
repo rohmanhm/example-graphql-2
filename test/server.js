@@ -1,23 +1,28 @@
 /* @flow */
 
+import axios from 'axios'
 import server from '../server'
 import config from '../config'
-import { assertStatusCode } from './helpers/serverAssertions'
+
+const request = axios.create({
+  baseURL: `http://localhost:${ config.port }`
+})
 
 describe('Server', () => {
 
-  beforeAll(() => {
-    server.listen(config.port, () => {
-      console.log('Server test running')
-    })
+  beforeAll(done => {
+    
   })
 
-  afterAll(() => {
-    // shutdown server
-    server.close()
+  afterAll(done => {
+    
   })
 
-  it('Should open graphiql', () => {
-    assertStatusCode(`http://localhost:${ config.port }/${ config.graphiqlEndpoint }`, 200)
+  it('should open endpoint /graphiql', async done => {
+    
+  })
+
+  it('should open endpoint /graphql', () => {
+    
   })
 })
