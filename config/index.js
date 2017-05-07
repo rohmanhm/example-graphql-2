@@ -17,6 +17,9 @@ const config = {
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT
   },
+  firebase: {
+    url: process.env.FIREBASE_URL
+  },
   graphqlEndpoint: '/graphql',
   graphiqlEndpoint: '/graphiql'
 }

@@ -14,20 +14,14 @@ export default new GraphQLObjectType({
   name: 'User',
   description: 'User schema',
   fields: {
-    id: {
-      type: new GraphQLNonNull(GraphQLID),
-      description: 'User ID'
+    username: {
+      type: new GraphQLNonNull(GraphQLString)
     },
-    name: {
-      type: GraphQLString,
-      description: 'User full name'
-    },
-    email: {
-      type: GraphQLString,
-      description: 'User email'
+    access_token: {
+      type: GraphQLString
     }
   },
-  interfaces: [NodeInterface]
+  // interfaces: [NodeInterface]
 })
 
 export * from './resolver'
