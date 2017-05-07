@@ -6,6 +6,7 @@
   ],
   "plugins": [
     "transform-export-extensions",
+    "dynamic-import-node",
     ["module-resolver", {
       "root": ["./"],
       "alias": {

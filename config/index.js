@@ -1,5 +1,22 @@
+const { resolve } = require('path')
+const { existsSync } = require('fs')
+
+let dotenv = resolve(__dirname, '..', '.env')
+if (!existsSync(dotenv)) {
+  dotenv = resolve(__dirname, '..', '.env.example')
+}
+require('dotenv').config({ path: dotenv })
+
 const config = {
+  port: 80,
   env: process.env.NODE_ENV,
+  db: {
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    pass: process.env.DB_PASS,
+    port: process.env.DB_PORT,
+    dialect: process.env.DB_DIALECT
+  },
   graphqlEndpoint: '/graphql',
   graphiqlEndpoint: '/graphiql'
 }
